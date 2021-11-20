@@ -48,7 +48,7 @@ const updateAnswer = async (client, id, word) => {
     SET word = $1
     WHERE question_id = $2
     AND is_completed = false
-    RETURNING * 
+    RETURNING question_id, answer_id, word
     `,
     [word, id],
   );

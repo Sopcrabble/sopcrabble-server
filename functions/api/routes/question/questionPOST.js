@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
       const addedQuestion = await questionDB.addQuestion(client, title, wordNum);
       
       res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.CREATE_QUESTION_SUCCESS, addedQuestion));
-      const newAnswer = await answerDB.addAnswer(client, addedQuestion.questionId, addedQuestion.wordNum);
+      await answerDB.addAnswer(client, addedQuestion.questionId, addedQuestion.wordNum);
     } catch (error) {
       functions.logger.error(`[ERROR] [${req.method.toUpperCase()}] ${req.originalUrl}`, `[CONTENT] ${error}`);
       console.log(error);

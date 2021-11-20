@@ -21,11 +21,11 @@ module.exports = async (req, res) => {
     res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.UPDATE_ANSWER_SUCCESS, updatedAnswer));
 
     const wordNum = await answerDB.getAnswerNum(client, id);
-    console.log(wordNum)
     if (!wordNum) return res.status(statusCode.NOT_FOUND).send(util.fail(statusCode.NOT_FOUND, responseMessage.OUT_OF_VALUE));
     
     if(word.length === wordNum) {
         await answerDB.completeAnswer(client, id);
+        await answerDB.addAnswer(client, updatedAnswer.questionId, updatedAnswer.wordNum);
     }
   } catch (error) {
     functions.logger.error(`[ERROR] [${req.method.toUpperCase()}] ${req.originalUrl}`, `[CONTENT] ${error}`);
