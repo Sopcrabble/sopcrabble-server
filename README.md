@@ -151,9 +151,6 @@
                |         |- 📋 index.js
                |         |- 📁 routes_
                |                      |- 📋 index.js
-               |                      |- 📁 user_
-               |                                 |-📋 index.js
-               |                                 |-📋 userGET.js
                |
                |- 📁 config_ 
                |            |- 📋 dbConfig.js
@@ -165,7 +162,6 @@
                |- 📁 db_ 
                |        |- 📋 db.js
                |        |- 📋 index.js
-               |        |- 📋 user.js
                |
                |- 📁 lib_
                          |- 📋 convertSnakeToCamel.js
