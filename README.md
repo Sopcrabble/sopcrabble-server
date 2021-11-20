@@ -5,6 +5,19 @@
 ## 1. 역할 분담
 #### 😎 주현: 초기 환경 세팅, API 설계, ERD 생성, API 명세서 작성
 #### 😋 규원: README 작성, API 설계, ERD 생성, API 명세서 작성
+| URI | 메서드 | 설명 | 담당 |
+| :-----: | :-----: | :-----: | :-----: |
+| /api/question | POST | 새로운 의뢰 만들기 | 규원 |
+| /api/question | GET | 모든 의뢰명 가져오기 | 규원 |
+| /api/question/:id | GET | 의뢰명, 글자수 가져오기 | 주현 |
+| /api/answer/:id | GET | 작성중인 단어 가져오기 | 주현 |
+| /api/answer/:id | PUT | 입력한 글자 저장 | 규원 |
+| /api/answer/list/:id | GET | 해당 의뢰 완성된 솝조어 좋아요 정렬된 배열 가져오기 | 주현 |
+| /api/answer/:id | POST | 좋아요 누르기 | 주현 |
+| /api/best | GET | 명예의 전당 의뢰들 & 답변들 가져오기 | 규원 |
+
+
+
 
 <br>
 <br>
