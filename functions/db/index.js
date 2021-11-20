@@ -1,4 +1,4 @@
 module.exports = {
-//    questionDB: require('./question'),
-    answerDB: require('./answer'),
-  };
+  questionDB: require('./question'),
+  answerDB: require('./answer')
+};
