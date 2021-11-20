@@ -1,4 +1,5 @@
 module.exports = {
   questionDB: require('./question'),
-  answerDB: require('./answer')
+  answerDB: require('./answer'),
+  bestDB: require('./best'),
 };
