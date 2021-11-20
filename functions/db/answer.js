@@ -45,4 +45,16 @@ const getAnswerById = async (client, id, answerId) => {
   return convertSnakeToCamel.keysToCamel(rows[0]);
 };
 
-module.exports = { getAllAnswers, getOneAnswer, getAnswerById };
+const addAnswer = async (client, id, wordNum) => {
+  const { rows } = await client.query(
+      `
+      INSERT INTO answer (question_id, word_num) 
+      VALUES ($1, $2)
+        RETURNING *
+      `,
+      [id, wordNum]
+  );
+  return convertSnakeToCamel.keysToCamel(rows[0]);
+};
+
+module.exports = { getAllAnswers, getOneAnswer, getAnswerById, addAnswer };
