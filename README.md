@@ -182,3 +182,32 @@
                          |- 📋 util.js
                
 ```
+<br><br>
+
+## 5. package.json
+![12조_package_json](https://user-images.githubusercontent.com/78714820/142743156-2eebe560-867d-49e5-8361-78f7855b1c9d.png)
+
+<br><br>
+
+## 6. ERD
+![12조_ERD](https://user-images.githubusercontent.com/78714820/142743203-7ead3ae7-76d6-485f-bed1-07b486e0ee43.png)
+
+<br><br>
+
+## 7. 테이블 정의
+### ****❤ QUESTION****
+![12조_테이블정의_QUESTION](https://user-images.githubusercontent.com/78714820/142743250-51de5340-9fc2-403f-9ffd-ec496af3de81.png)
+
+<br>
+
+### ****💛 ANSWER****
+![12조_테이블정의_ANSWER](https://user-images.githubusercontent.com/78714820/142743251-2298ade3-380a-44b2-b60e-c9d23e683adb.png)
+
+<br>
+
+### ****💚 BEST****
+![12조_테이블정의_BEST](https://user-images.githubusercontent.com/78714820/142743253-348f2b7c-7165-479a-868a-655c19ac338c.png)
+
+<br>
+
+
