@@ -45,44 +45,4 @@ const getAnswerById = async (client, id, answerId) => {
   return convertSnakeToCamel.keysToCamel(rows[0]);
 };
 
-// const updateUser = async (client, username, phone, userId) => {
-//   const { rows: existingRows } = await client.query(
-//     `
-//     SELECT * FROM "user"
-//     WHERE id = $1
-//        AND is_deleted = FALSE
-//     `,
-//     [userId],
-//   );
-
-//   if (existingRows.length === 0) return false;
-
-//   const data = _.merge({}, convertSnakeToCamel.keysToCamel(existingRows[0]), { username, phone });
-
-//   const { rows } = await client.query(
-//     `
-//     UPDATE "user" u
-//     SET username = $1, phone = $2, updated_at = now()
-//     WHERE id = $3
-//     RETURNING * 
-//     `,
-//     [data.username, data.phone, userId],
-//   );
-//   return convertSnakeToCamel.keysToCamel(rows[0]);
-// };
-
-// const deleteUser = async (client, userId) => {
-//   const { rows } = await client.query(
-//     `
-//     UPDATE "user" u
-//     SET is_deleted = TRUE, updated_at = now()
-//     WHERE id = $1
-//     RETURNING *
-//     `,
-//     [userId],
-//   );
-
-//   return convertSnakeToCamel.keysToCamel(rows[0]);
-// };
-
 module.exports = { getAllAnswers, getOneAnswer, getAnswerById };
