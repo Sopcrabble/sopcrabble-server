@@ -1,1 +1,1 @@
-# sopcrabble-server
+# word-relay-server
