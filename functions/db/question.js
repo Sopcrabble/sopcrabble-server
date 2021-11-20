@@ -15,7 +15,7 @@ const addQuestion = async (client, title, wordNum) => {
     return convertSnakeToCamel.keysToCamel(rows[0]);
 };
 
-const getAllquestion = async(client) => {
+const getAllQuestion = async(client) => {
     const { rows } = await client.query(
         `
         SELECT question_id, title FROM "question" q
@@ -25,4 +25,16 @@ const getAllquestion = async(client) => {
     return convertSnakeToCamel.keysToCamel(rows);
 }
 
-module.exports = { addQuestion, getAllquestion };
+const getOneQuestion = async (client, id) => {
+    const { rows } = await client.query(
+      `
+      SELECT question_id, title, word_num FROM "question" q
+      WHERE question_id = $1
+      `,
+      [id],
+    );
+  
+    return convertSnakeToCamel.keysToCamel(rows[0]);
+  };
+
+module.exports = { addQuestion, getAllQuestion, getOneQuestion };
